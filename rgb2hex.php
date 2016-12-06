@@ -1,7 +1,8 @@
 <?php
 /**
  * RGB 转 十六进制
- * @param   $rgb    RGB颜色的字符串 如：rgb(255, 255, 255);
+ *
+ * @param   string  $rgb    RGB颜色的字符串 如：rgb(255, 255, 255);
  * @return  string  十六进制颜色值 如：#FFFFFF
  */
 function rgb2hex($rgb){
@@ -27,6 +28,7 @@ function rgb2hex($rgb){
 	}
 	return $hexColor;
 }
+
 // 测试上面的函数
 function yzmCOLOR(){
 	$y1 = mt_rand(0, 255);
@@ -35,3 +37,4 @@ function yzmCOLOR(){
 	$y4 = rgb2hex("rgb({$y1}, {$y2}, {$y3})");
 	return $y4;
 }
+echo yzmCOLOR();
