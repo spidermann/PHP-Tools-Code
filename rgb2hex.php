@@ -34,7 +34,14 @@ function yzmCOLOR(){
 	$y1 = mt_rand(0, 255);
 	$y2 = mt_rand(0, 255);
 	$y3 = mt_rand(0, 255);
-	$y4 = rgb2hex("rgb({$y1}, {$y2}, {$y3})");
-	return $y4;
+	$y4 = "rgb({$y1}, {$y2}, {$y3})";
+	$y5 = rgb2hex($y4);
+	
+	$returnArr = array();
+	$returnArr = array($y4, $y5);
+	return $returnArr;
 }
-echo yzmCOLOR();
+
+$res = yzmCOLOR();
+echo '<pre>';
+print_r($res);
